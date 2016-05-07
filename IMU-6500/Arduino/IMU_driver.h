@@ -56,8 +56,8 @@ void enable_IMU(float range_acc, float range_gyro);
 void change_range_gyro(float range);
 void change_range_acc(float range);
 
-accel_data_t get_raw_accData_IMU(void);
-gyro_data_t get_raw_gyroData_IMU(void);
+accel_data_t get_accData_IMU(void);
+gyro_data_t get_gyroData_IMU(void);
 IMU_6050_t get_allData_IMU(void);
 
 uint32_t update_and_get_Data_IMU(void);

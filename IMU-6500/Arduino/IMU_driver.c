@@ -56,7 +56,7 @@ void change_range_acc(float range)
 	range_acc_actualy = range;
 }
 
-accel_data_t get_raw_accData_IMU(void)
+accel_data_t get_accData_IMU(void)
 {
 	accel_data_t rcvd;
 	Wire.beginTransmission(MPU);
@@ -69,7 +69,7 @@ accel_data_t get_raw_accData_IMU(void)
 	return rcvd;
 }
 
-gyro_data_t get_raw_gyroData_IMU(void)
+gyro_data_t get_gyroData_IMU(void)
 {
 	gyro_data_t rcvd;
 	Wire.beginTransmission(MPU);
