@@ -1,13 +1,9 @@
-/*
- * IMU_filter.c
- *
- * Created: 23/04/2016 02:26:00 p. m.
- *  Author: aleja_000
- */ 
 #include "IMU_filter.h"
 
+/*that code was created by Sebastian O.H. Madgwick*/
 QuaternionStruct filterUpdate(float deltat, float w_x, float w_y, float w_z, float a_x, float a_y, float a_z)
 {
+
 	// Local system variables
 	float norm; // vector norm
 	float SEqDot_omega_1, SEqDot_omega_2, SEqDot_omega_3, SEqDot_omega_4; // quaternion derrivative from gyroscopes elements

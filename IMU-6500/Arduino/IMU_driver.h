@@ -3,7 +3,7 @@
  * this driver is otpimized for full speed read in samE7 20MHz only when do you need to read the sense
  * when do you need to write the registers the speed of the SPI is changed to 1MHz 
  * Created: 23/04/2016 03:36:31 p. m.
- *  Author: aleja_000
+ *  Author: Alejandro M
  */ 
 
 
@@ -11,6 +11,13 @@
 #define IMU_DRIVER_H_
 
 #include "IMU_filter.h"
+#include <Arduino.h>
+
+#include <Wire.h>
+ 
+//Direccion I2C de la IMU
+#define MPU 0x68
+
 
 typedef enum{
 	TYPE_GYRO_DATA,
@@ -43,6 +50,11 @@ typedef struct IMU_6050_data_t{
 uint32_t lastUpdate = 0;
 
 void enable_IMU(void);
+
+accel_data_t get_raw_accData_IMU(void);
+gyro_data_t get_raw_gyroData_IMU(void);
+IMU_6050_t get_allData_IMU(void);
+
 uint32_t update_and_get_Data_IMU(void);
 uint32_t get_data_position_IMU(void);
 

@@ -41,7 +41,7 @@ QuaternionStruct lastPosition;
 /* detlat is sampling in seconds
  * w_ is the components of the gyroscope in deg/s
  * a_ is the components of the acelerometer in m/s^2 */
-QuaternionStruct filterUpdate(float deltat, float w_x, float w_y, float w_z, float a_x, float a_y, float a_z)
+QuaternionStruct filterUpdate(float deltat, float w_x, float w_y, float w_z, float a_x, float a_y, float a_z);
 EulerAnglesStruct getEulerAngles(QuaternionStruct quaternion);
 float radiansToDegrees (float radians);
 
