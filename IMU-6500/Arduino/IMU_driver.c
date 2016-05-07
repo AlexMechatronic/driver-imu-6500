@@ -14,7 +14,7 @@ void enable_IMU(void)
 	Wire.write(0x6B);
 	Wire.write(0);
 	Wire.endTransmission(true);
-}
+} 
 
 accel_data_t get_raw_accData_IMU(range_data_t t_data)
 {
@@ -45,7 +45,7 @@ gyro_data_t get_raw_gyroData_IMU(range_data_t t_data)
 IMU_6050_t get_allData_IMU(range_data_t t_data_acc, range_data_t t_data_gyro)
 {
 	IMU_6050_t rcvd;
-	
+
 	Wire.beginTransmission(MPU);
 	Wire.write(ACCEL_XOUT_H); //Pedir el registro 0x3B - corresponde al AcX
 	Wire.endTransmission(false);

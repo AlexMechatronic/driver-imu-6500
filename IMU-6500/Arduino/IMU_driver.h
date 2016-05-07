@@ -53,7 +53,7 @@ typedef struct accel_struct{
 typedef struct IMU_6050_data_t{
 		accel_data_t accel;
 		gyro_data_t gyro;
-	}IMU_6050_t;
+	}IMU_6050_t; 
 
 
 //global variables
